@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- this is our beans -->
+	<bean class="spring_4155D.mySpringprogram.Student" name="student">
+		
+		<!-- Method -1 of declarng name and value-->
+		<property name="rollno">
+			<value>100</value>
+		</property>
+		<property name="name">
+			<value>Vyankatesh</value>
+		</property>
+		
+		<!-- Method -2 of declarng name and value-->
+		<property name="city" value="Mumbai"/>
+			
+	</bean>
+	
+	<bean class="spring_4155D.mySpringprogram.Student1" name="student1">
+		<constructor-arg value="121"/>
+		<constructor-arg value="virat"/>
+		<constructor-arg value="Pune"/>
+	</bean>
+	
+	<bean class="spring_4155D.mySpringprogram.Employee" name="employee">
+		<constructor-arg value="001"/>
+		<constructor-arg value="Abhishek"/>
+		<constructor-arg value="Ceo"/>
+		<constructor-arg value="5000000"/>
+		
+	</bean>
+</beans>
