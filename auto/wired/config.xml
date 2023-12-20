@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+   <!-- bean definitions go here -->
+   <bean class="core.spring.auto.wired.Address" name="address12">
+	   <property name="street" value="Satara Road"/>
+	   <property name="city" value="Pune"/>
+	   <property name="country" value="India"/>
+   </bean>
+   
+<!--<bean class="core.spring.auto.wired.Employee" name="emp" autowire="byName"/> --> 
+<!-- For byName autowiring ref bean (here address bean) have one variable must be same with name="" (here address)-->
+
+  
+  <!--  <bean class="core.spring.auto.wired.Employee" name="emp" autowire="byType"/> -->
+   <bean class="core.spring.auto.wired.Employee" name="emp" autowire="constructor"/> 
+
+</beans>

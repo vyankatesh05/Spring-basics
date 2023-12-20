@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean class="core.spring.swingExercise2.Customer" name="customer">
+		<property name="name" value="Vyankatesh" />
+
+		<property name="address">
+			<list>
+				<value>Pune</value>
+				<value>mumbai</value>
+			</list>
+			
+		</property>
+		
+		<property name="accounts">
+            <list>
+                <ref bean="account1" />
+                <ref bean="account2" />
+            </list>
+        </property>
+
+	</bean>
+	
+	
+	
+	 <bean  class="core.spring.swingExercise2.Account" name="account1">
+        <property name="accountNumbers">
+            <list>
+                <value>12345</value>
+                <value>67890</value>
+            </list>
+        </property>
+        <property name="balances">
+            <list>
+                <value>5000.00</value>
+                <value>8000.00</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean  class="core.spring.swingExercise2.Account" name="account2">
+        <property name="accountNumbers">
+            <list>
+                <value>11111</value>
+                <value>22222</value>
+            </list>
+        </property>
+        <property name="balances">
+            <list>
+                <value>10000.00</value>
+                <value>15000.00</value>
+            </list>
+        </property>
+    </bean>
+</beans>
